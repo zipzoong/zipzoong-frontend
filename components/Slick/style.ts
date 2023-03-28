@@ -12,6 +12,7 @@ export const SlickLayout = styled.div`
 	display: flex;
 	width: 100vw;
 	height: 410px;
+	position: relative;
 	justify-content: center;
 	align-items: center;
 
