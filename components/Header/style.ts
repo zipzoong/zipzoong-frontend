@@ -29,8 +29,8 @@ export const HeaderContainer = styled.div`
 	@media ALL and (max-width: 1239px) {
 	}
 	@media ALL and (min-width: 1240px) {
-		width: 1040px;
-		gap: 20px;
+		width: 74vw;
+		gap: 1.4vw;
 	}
 `
 
@@ -43,6 +43,7 @@ export const HeaderLogo = styled(Image)`
 export const Navigation = styled(Link)<{ color: string }>`
 	font-size: ${textStyle.Body1_16_M.fontSize};
 	font-weight: ${textStyle.Body1_16_M.fontWeight};
+	font-family: ${textStyle.fontFamily.P4};
 	color: ${(props) => props.color};
 `
 
@@ -59,18 +60,18 @@ export const SearchContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 100px;
+	margin-left: auto;
 `
 
 export const SearchInput = styled.input`
-	width: 250px;
+	width: 16vw;
 	height: 36px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border: 1px solid ${color.on_tertiary};
 	border-right: none;
 
-	font-weight: 500;
+	font-family: ${textStyle.fontFamily.P5};
 	color: ${color.black};
 	font-size: 13px;
 	background-color: transparent;
