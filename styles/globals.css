@@ -1,27 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
-	font-family: 'Pretendard';
-	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	unicode-range: U+AC00-D7A3;
+	font-family: 'P1';
+	src: url('../fonts/Pretendard-Thin.woff');
 }
 
-* {
-	font-family: 'Outfit', 'Pretendard';
+@font-face {
+	font-family: 'P2';
+	src: url('../fonts/Pretendard-Light.woff');
+}
+
+@font-face {
+	font-family: 'P3';
+	src: url('../fonts/Pretendard-ExtraLight.woff');
+}
+
+@font-face {
+	font-family: 'P4';
+	src: url('../fonts/Pretendard-Regular.woff');
+}
+
+@font-face {
+	font-family: 'P5';
+	src: url('../fonts/Pretendard-Medium.woff');
+}
+
+@font-face {
+	font-family: 'P6';
+	src: url('../fonts/Pretendard-SemiBold.woff');
+}
+
+@font-face {
+	font-family: 'P7';
+	src: url('../fonts/Pretendard-Bold.woff');
+}
+
+@font-face {
+	font-family: 'P8';
+	src: url('../fonts/Pretendard-ExtraBold.woff');
+}
+
+@font-face {
+	font-family: 'P9';
+	src: url('../fonts/Pretendard-Black.woff');
 }
 
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: 'P1';
 }
 
 html,
 body {
 	background-color: white;
-	max-width: 1440px;
 	overflow-x: hidden;
 }
 
