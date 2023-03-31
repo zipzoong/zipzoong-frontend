@@ -59,6 +59,7 @@ export const FooterInfoTitleText = styled.span`
 	font-size: 14px;
 	font-family: 'P6';
 	margin-bottom: 6px;
+	color: ${color.white};
 `
 
 export const FooterInfoText = styled.span`

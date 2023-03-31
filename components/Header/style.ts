@@ -38,6 +38,7 @@ export const HeaderLogo = styled(Image)`
 	width: 58px;
 	height: auto;
 	margin-right: 10px;
+	cursor: pointer;
 `
 
 export const Navigation = styled(Link)<{ color: string }>`

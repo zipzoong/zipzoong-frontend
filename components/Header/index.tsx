@@ -3,16 +3,19 @@ import * as S from './style'
 import logo from 'assets/logo.svg'
 import color from '@/styles/color.theme'
 import search from 'assets/search.svg'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+	const router = useRouter()
+
 	return (
 		<S.HeaderLayout>
 			<S.HeaderContainer>
-				<S.HeaderLogo src={logo} alt="" />
-				<S.Navigation color={color.tertiary} href="/">
+				<S.HeaderLogo src={logo} alt="" onClick={() => router.push('/')} />
+				<S.Navigation color={color.tertiary} href="/search/estate">
 					중개사매칭
 				</S.Navigation>
-				<S.Navigation color={color.tertiary} href="/">
+				<S.Navigation color={color.tertiary} href="/search/life">
 					생활서비스
 				</S.Navigation>
 				<S.Navigation color={color.tertiary} href="/">
