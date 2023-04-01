@@ -30,14 +30,14 @@ export const HeaderContainer = styled.div`
 	}
 	@media ALL and (min-width: 1240px) {
 		width: 74vw;
-		gap: 1.4vw;
+		gap: 1.8vw;
 	}
 `
 
 export const HeaderLogo = styled(Image)`
 	width: 58px;
 	height: auto;
-	margin-right: 10px;
+	margin-right: 8px;
 	cursor: pointer;
 `
 
@@ -53,6 +53,9 @@ export const SignupButton = styled.button`
 	height: 30px;
 	background-color: ${color.primary};
 	color: ${color.white};
+	font-size: ${textStyle.Body2_14_M.fontSize};
+	font-weight: ${textStyle.Body2_14_M.fontWeight};
+	font-family: ${textStyle.Body2_14_M.fontFamily};
 	border-radius: 10px;
 	border: none;
 `

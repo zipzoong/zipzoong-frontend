@@ -42,7 +42,7 @@ const textStyle = {
 	Body1_16_M: {
 		fontSize: '16px',
 		fontWeight: 500,
-		fontFamily: 'P5',
+		fontFamily: 'P4',
 	},
 	Body2_14_B: {
 		fontSize: '14px',
