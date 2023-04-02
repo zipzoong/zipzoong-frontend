@@ -9,6 +9,7 @@ export const HeaderLayout = styled.div`
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 
 	@media ALL and (max-width: 904px) {
 	}
@@ -27,6 +28,9 @@ export const HeaderContainer = styled.div`
 	@media ALL and (max-width: 904px) {
 	}
 	@media ALL and (max-width: 1239px) {
+		width: 92vw;
+		gap: 1.6vw;
+		height: 56px;
 	}
 	@media ALL and (min-width: 1240px) {
 		width: 74vw;
@@ -41,11 +45,15 @@ export const HeaderLogo = styled(Image)`
 	cursor: pointer;
 `
 
-export const Navigation = styled(Link)<{ color: string }>`
+export const Navigation = styled(Link)<{ color: string; ismediaquery?: string }>`
 	font-size: ${textStyle.Body1_16_M.fontSize};
 	font-weight: ${textStyle.Body1_16_M.fontWeight};
 	font-family: ${textStyle.fontFamily.P4};
 	color: ${(props) => props.color};
+
+	@media ALL and (max-width: 1239px) {
+		margin-left: ${({ ismediaquery }) => ismediaquery && 'auto'};
+	}
 `
 
 export const SignupButton = styled.button`
@@ -65,6 +73,24 @@ export const SearchContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-left: auto;
+
+	@media ALL and (max-width: 1239px) {
+		display: none;
+	}
+`
+
+export const MediaQuerySearchContainer = styled.div`
+	@media ALL and (min-width: 1239px) {
+		display: none;
+	}
+	width: 92vw;
+	height: 34px;
+	background-color: ${color.secondary_container};
+	border-radius: 999px;
+	padding-left: 12px;
+	margin: 6px 0 20px 0;
+	display: flex;
+	align-items: center;
 `
 
 export const SearchInput = styled.input`
@@ -85,6 +111,14 @@ export const SearchInput = styled.input`
 	&::placeholder {
 		color: ${color.on_tertiary};
 	}
+
+	@media ALL and (max-width: 1239px) {
+		border: none;
+
+		&::placeholder {
+			color: ${color.on_tertiary_container};
+		}
+	}
 `
 
 export const SearchButton = styled.button`
@@ -100,5 +134,15 @@ export const SearchButton = styled.button`
 	padding-right: 12px;
 	justify-content: center;
 	align-items: center;
+
+	@media ALL and (max-width: 1239px) {
+		margin-left: auto;
+		border: none;
+		margin-right: 8px;
+
+		path {
+			fill: blue;
+		}
+	}
 `
 export const SearchLogo = styled(Image)``

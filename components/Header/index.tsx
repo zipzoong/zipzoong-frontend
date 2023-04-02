@@ -3,6 +3,7 @@ import * as S from './style'
 import logo from 'assets/logo.svg'
 import color from '@/styles/color.theme'
 import search from 'assets/search.svg'
+import searchprimary from 'assets/searchprimary.svg'
 import { useRouter } from 'next/router'
 
 const Header = () => {
@@ -30,7 +31,7 @@ const Header = () => {
 						<S.SearchLogo src={search} alt="" />
 					</S.SearchButton>
 				</S.SearchContainer>
-				<S.Navigation color={color.gray} href="/">
+				<S.Navigation ismediaquery="true" color={color.gray} href="/">
 					전문가등록
 				</S.Navigation>
 				<S.Navigation color={color.gray} href="/">
@@ -38,6 +39,12 @@ const Header = () => {
 				</S.Navigation>
 				<S.SignupButton>회원가입</S.SignupButton>
 			</S.HeaderContainer>
+			<S.MediaQuerySearchContainer>
+				<S.SearchInput placeholder="검색어를 입력하세요" />
+				<S.SearchButton>
+					<S.SearchLogo src={searchprimary} alt="" />
+				</S.SearchButton>
+			</S.MediaQuerySearchContainer>
 		</S.HeaderLayout>
 	)
 }

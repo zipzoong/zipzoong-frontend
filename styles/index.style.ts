@@ -19,6 +19,10 @@ export const EstateLayout = styled.div`
 export const EstateContainer = styled.div`
 	width: 74vw;
 	height: 410px;
+
+	@media ALL and (max-width: 1239px) {
+		width: 92vw;
+	}
 `
 
 export const EstateTitleText = styled.span`
@@ -26,6 +30,17 @@ export const EstateTitleText = styled.span`
 	font-size: 24px;
 	font-weight: 600;
 	font-family: ${textStyle.fontFamily.P6};
+
+	@media ALL and (max-width: 1239px) {
+		font-size: ${textStyle.Body1_16_B.fontSize};
+		font-family: ${textStyle.Body1_16_B.fontFamily};
+	}
+`
+
+export const EstateMediaContianer = styled.div`
+	@media ALL and (max-width: 1239px) {
+		display: flex;
+	}
 `
 
 export const IconContainer = styled.div`
@@ -34,6 +49,14 @@ export const IconContainer = styled.div`
 	width: 74vw;
 	justify-content: space-between;
 	margin: 5vh 0 5vh 0;
+
+	@media ALL and (max-width: 1239px) {
+		width: 45vw;
+
+		&:last-child {
+			margin-left: auto;
+		}
+	}
 `
 
 export const IconWrap = styled.div`
@@ -45,22 +68,38 @@ export const IconWrap = styled.div`
 `
 
 export const IconBox = styled.div`
+	@media ALL and (max-width: 1239px) {
+		width: 60px;
+		height: 60px;
+		border-radius: 20px;
+	}
+
 	width: 120px;
+	height: 120px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 120px;
 	border-radius: 40px;
 	background-color: ${color.tertiary_container};
 `
 
-export const IconLogo = styled(Image)``
+export const IconLogo = styled(Image)`
+	@media ALL and (max-width: 1239px) {
+		width: 24px;
+		height: 24px;
+	}
+`
 
 export const IconText = styled.span`
 	font-size: ${textStyle.H4_18_R.fontSize};
 	font-weight: ${textStyle.H4_18_R.fontWeight};
 	font-family: ${textStyle.H4_18_R.fontFamily};
 	color: ${color.tertiary};
+
+	@media ALL and (max-width: 1239px) {
+		font-size: ${textStyle.Body3_12_M.fontSize};
+		font-family: ${textStyle.Body3_12_M.fontFamily};
+	}
 `
 
 export const ButtonLayout = styled.div`

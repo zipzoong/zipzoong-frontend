@@ -81,18 +81,20 @@ const Home = () => {
 			<S.EstateLayout>
 				<S.EstateContainer>
 					<S.EstateTitleText>어떤 중계사를 찾고 계신가요?</S.EstateTitleText>
-					{iconInfo.map((info, index) => (
-						<S.IconContainer key={index}>
-							{info.map((icon, index) => (
-								<S.IconWrap key={index}>
-									<S.IconBox>
-										<S.IconLogo src={icon.src} alt="" />
-									</S.IconBox>
-									<S.IconText>{icon.title}</S.IconText>
-								</S.IconWrap>
-							))}
-						</S.IconContainer>
-					))}
+					<S.EstateMediaContianer>
+						{iconInfo.map((info, index) => (
+							<S.IconContainer key={index}>
+								{info.map((icon, index) => (
+									<S.IconWrap key={index}>
+										<S.IconBox>
+											<S.IconLogo src={icon.src} alt="" />
+										</S.IconBox>
+										<S.IconText>{icon.title}</S.IconText>
+									</S.IconWrap>
+								))}
+							</S.IconContainer>
+						))}
+					</S.EstateMediaContianer>
 				</S.EstateContainer>
 			</S.EstateLayout>
 			<S.ButtonLayout>
