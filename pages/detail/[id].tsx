@@ -40,7 +40,9 @@ const Detail = () => {
 					<S.DetailProfileButton color={color.primary}>상담신청</S.DetailProfileButton>
 					<S.DetailProfileButton color={color.tertiary_container}>후기작성</S.DetailProfileButton>
 				</S.DetailProfileContainer>
-				{detailType === 'ALL' ? <DetailALL /> : detailType === 'ITEM' ? <DetailItem /> : <DetailReview />}
+				{detailType === 'ALL' && <DetailALL />}
+				{detailType === 'ITEM' && <DetailItem />}
+				{detailType === 'REVIEW' && <DetailReview />}
 			</S.DetailContainer>
 		</S.DetailLayout>
 	)
