@@ -1,7 +1,8 @@
+import LoginLayout from '@/layouts/LoginLayout'
 import React from 'react'
 
 const Login = () => {
-	return <div></div>
+	return <LoginLayout />
 }
 
 export default Login

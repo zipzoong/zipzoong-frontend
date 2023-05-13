@@ -3,7 +3,7 @@ import textStyle from '@/styles/text.theme'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export const SearchWrap = styled.div`
+export const SearchLayout = styled.div`
 	width: 80vw;
 `
 
