@@ -13,7 +13,7 @@ interface SearchLayoutPropsType {
 const SearchLayout = ({ option }: SearchLayoutPropsType) => {
 	return (
 		<S.SearchContainer>
-			<S.SearchWrap>
+			<S.SearchLayout>
 				<S.SearchButton />
 				<S.SearchBoxContainer>
 					<S.SearchSelectBoxContainer>
@@ -101,7 +101,7 @@ const SearchLayout = ({ option }: SearchLayoutPropsType) => {
 						</S.SearchPagenationContainer>
 					</S.SearchItemContainer>
 				</S.SearchBoxContainer>
-			</S.SearchWrap>
+			</S.SearchLayout>
 		</S.SearchContainer>
 	)
 }

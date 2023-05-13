@@ -1,6 +1,7 @@
 const color = {
 	primary: '#3772F7',
 	primary_container: '#F6FBFF',
+	subcolor: '#ECF3FF',
 	on_primary_container: '#5F8EF9',
 	secondary: '#1C3E8A',
 	secondary_container: '#ECF3FF',
