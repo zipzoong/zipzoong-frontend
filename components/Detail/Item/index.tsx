@@ -1,4 +1,4 @@
-import * as S from '@/layouts/detail/style'
+import * as S from '@/layouts/DetailLayout.style'
 import dropdown from 'assets/detaildropdown.svg'
 import dropup from 'assets/detaildropup.svg'
 
