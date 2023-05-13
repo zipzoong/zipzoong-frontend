@@ -34,7 +34,7 @@ const Header = () => {
 				<S.Navigation ismediaquery="true" color={color.gray} href="/">
 					전문가등록
 				</S.Navigation>
-				<S.Navigation color={color.gray} href="/">
+				<S.Navigation color={color.gray} href="/login">
 					로그인
 				</S.Navigation>
 				<S.SignupButton>회원가입</S.SignupButton>
