@@ -2,22 +2,22 @@ const textStyle = {
 	eng_12_bk: {
 		fontSize: '12px',
 		fontWeight: 900,
-		fontFamily: 'P9',
+		fontFamily: 'P8',
 	},
 	H1_26_EB: {
 		fontSize: '26px',
 		fontWeight: 800,
-		fontFamily: 'P8',
+		fontFamily: 'P7',
 	},
 	H2_22_B: {
 		fontSize: '22px',
 		fontWeight: 700,
-		fontFamily: 'P7',
+		fontFamily: 'P6',
 	},
 	H3_20_B: {
 		fontSize: '20px',
 		fontWeight: 700,
-		fontFamily: 'P7',
+		fontFamily: 'P6',
 	},
 	H3_20_R: {
 		fontSize: '20px',
@@ -76,14 +76,14 @@ const textStyle = {
 	},
 	fontFamily: {
 		P1: 'P1',
-		P2: 'P2',
-		P3: 'P3',
-		P4: 'P4',
-		P5: 'P5',
-		P6: 'P6',
-		P7: 'P7',
-		P8: 'P8',
-		P9: 'P9',
+		P2: 'P1',
+		P3: 'P2',
+		P4: 'P3',
+		P5: 'P4',
+		P6: 'P5',
+		P7: 'P6',
+		P8: 'P7',
+		P9: 'P8',
 	},
 }
 

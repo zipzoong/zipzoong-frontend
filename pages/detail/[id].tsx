@@ -15,7 +15,7 @@ const Detail = () => {
 					<span>전체보기</span>
 				</S.DetailControlOption>
 				<S.DetailControlOption onClick={() => setDetailType('ITEM')} colors={detailType === 'ITEM' ? color.primary : ''}>
-					<span>매물정보({0})</span>
+					<span>작업사례({0})</span>
 				</S.DetailControlOption>
 				<S.DetailControlOption onClick={() => setDetailType('REVIEW')} colors={detailType === 'REVIEW' ? color.primary : ''}>
 					<span>계약자후기({0})</span>
