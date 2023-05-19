@@ -4,8 +4,14 @@ import DetailALL from '@/components/Detail/All'
 import DetailItem from '@/components/Detail/Item'
 import DetailReview from '@/components/Detail/Review'
 import * as S from './DetailLayout.style'
+import { IHSProvider } from '@zipzoong/sdk/lib/structures/user/hs_provider'
+import { IREAgent } from '@zipzoong/sdk/lib/structures/user/re_agent'
 
-const DetailLayout = () => {
+interface DetailLayoutPropsType {
+	data: IHSProvider | IREAgent
+}
+
+const DetailLayout = ({ data }: DetailLayoutPropsType) => {
 	const [detailType, setDetailType] = React.useState('ALL')
 
 	return (
