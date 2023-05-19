@@ -3,14 +3,17 @@ import color from '@/styles/color.theme'
 import reset from 'assets/reset.svg'
 import Image from 'next/image'
 import React from 'react'
-import * as S from './SearchLayout.style'
+import * as S from './ViewLayout.style'
 import SelectOptionType from '@/types/selectOption.type'
+import { IHSProvider } from '@zipzoong/sdk/lib/structures/user/hs_provider'
+import { IREAgent } from '@zipzoong/sdk/lib/structures/user/re_agent'
 
-interface SearchLayoutPropsType {
+interface ViewLayoutPropsType {
 	option: SelectOptionType
+	data: IHSProvider[] | IREAgent[]
 }
 
-const SearchLayout = ({ option }: SearchLayoutPropsType) => {
+const ViewLayout = ({ option, data }: ViewLayoutPropsType) => {
 	return (
 		<S.SearchContainer>
 			<S.SearchLayout>
@@ -43,31 +46,31 @@ const SearchLayout = ({ option }: SearchLayoutPropsType) => {
 								<span>초기화하기</span>
 							</S.SearchSearchClearButton>
 						</S.SearchSearchContainer>
-						{[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, index) => (
-							<S.SearchItem href="/detail/1" key={index}>
-								<S.SearchItemImage />
+						{data.map((item) => (
+							<S.SearchItem href={`/detail/${item.id}?type=${item.type}`} key={item.id}>
+								<S.SearchItemImage src={item.profile_image_url} alt="" />
 								<S.SearchItemDetailContainer>
 									<S.SearchBlueSubTitleWrap>
 										<div id="tag">
 											<div id="circle" />
-											<span>아파트</span>
+											<span>{item.expertise.super_category_name}</span>
 										</div>
 										<div id="tag">
 											<div id="circle" />
-											<span>매물 00개</span>
+											{/* <span>{item}</span> */}
 										</div>
 										<S.SearchReviewBox>⭐ 5.0 / 후기 00건</S.SearchReviewBox>
 									</S.SearchBlueSubTitleWrap>
 									<S.SearchTitleContainer>
-										김00중개사
+										{item.name}
 										<span>0000공인중개사 소속</span>
 									</S.SearchTitleContainer>
 									<S.SearchTitleSubText>아파트 매매 전문 친절한 상담을 하...</S.SearchTitleSubText>
 									<S.SearchFlexBox>
 										<S.SearchHashtagContainer>
-											<S.SearchHashtag>#태그1</S.SearchHashtag>
-											<S.SearchHashtag>#태그2</S.SearchHashtag>
-											<S.SearchHashtag>#태그3</S.SearchHashtag>
+											{item.expertise.sub_expertises.map((category) => (
+												<S.SearchHashtag key={category.sub_category_id}>#{category.sub_category_name}</S.SearchHashtag>
+											))}
 										</S.SearchHashtagContainer>
 										<S.SearchLinkButtonContainer>
 											<S.SearchLinkButton color={color.on_tertiary_container}>
@@ -106,4 +109,4 @@ const SearchLayout = ({ option }: SearchLayoutPropsType) => {
 	)
 }
 
-export default SearchLayout
+export default ViewLayout

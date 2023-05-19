@@ -13,10 +13,10 @@ const Header = () => {
 		<S.HeaderLayout>
 			<S.HeaderContainer>
 				<S.HeaderLogo src={logo} alt="" onClick={() => router.push('/')} />
-				<S.Navigation color={color.tertiary} href="/search/estate">
+				<S.Navigation color={color.tertiary} href="/view/estate">
 					중개사매칭
 				</S.Navigation>
-				<S.Navigation color={color.tertiary} href="/search/life">
+				<S.Navigation color={color.tertiary} href="/view/life">
 					생활서비스
 				</S.Navigation>
 				<S.Navigation color={color.tertiary} href="/">

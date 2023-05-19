@@ -1,5 +1,6 @@
 import color from '@/styles/color.theme'
 import textStyle from '@/styles/text.theme'
+import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 
@@ -104,7 +105,7 @@ export const SearchItem = styled(Link)`
 	}
 `
 
-export const SearchItemImage = styled.div`
+export const SearchItemImage = styled(Image)`
 	width: 30%;
 	height: 190px;
 	background-color: #d9d9d9;
