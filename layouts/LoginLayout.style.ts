@@ -16,25 +16,28 @@ export const LoginBackgroundLayout = styled.div`
 	background-color: ${color.subcolor};
 `
 
-export const LoginBackgroundTitleText = styled.span`
-	margin-top: 6vw;
-	font-size: ${textStyle.H2_22_B.fontSize};
-	font-family: ${textStyle.H2_22_B.fontFamily};
-	color: ${color.tertiary};
+export const LoginContainer = styled.div`
+	width: 32vw;
+	height: 78vh;
+	box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+	background-color: white;
+	margin-top: 6vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 12px;
 `
 
-export const LoginTypeBoxContainer = styled.div`
-	display: flex;
-	gap: 20px;
-	position: absolute;
-	top: 36vh;
+export const LoginContainerTitle = styled.span`
+	font-size: 26px;
+	font-family: ${textStyle.fontFamily.P9};
+	color: ${color.primary};
 `
-export const LoginTypeBox = styled.div`
-	width: 20vw;
-	height: 20vw;
-	background-color: ${color.white};
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
+
+export const LoginInputContainer = styled.div`
+	width: 82%;
+	padding: 14px 0 0 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -42,28 +45,104 @@ export const LoginTypeBox = styled.div`
 	gap: 20px;
 `
 
-export const LoginTypeImage = styled(Image)`
-	width: 100px;
-	height: 100px;
-	background-color: ${color.gray};
-	/* border-radius: 100%; */
-`
-
-export const LoginTypeText = styled.span`
-	font-size: ${textStyle.Body1_16_M.fontSize};
-	font-family: ${textStyle.Body1_16_M.fontFamily};
-	color: ${color.tertiary};
-`
-
-export const LoginTypeButton = styled.div`
-	width: 160px;
-	height: 42px;
-	background-color: ${color.primary};
+export const LoginInputContainerBox = styled.div`
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: ${textStyle.Body2_14_M.fontSize};
-	font-family: ${textStyle.Body2_14_M.fontFamily};
+	flex-direction: column;
+	gap: 6px;
+`
+
+export const LoginInputContainerInput = styled.input`
+	width: 100%;
+	height: 42px;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	padding-left: 16px;
+	outline: none;
+	font-size: 16px;
+`
+
+export const LoginInputContainerLabel = styled.label`
+	font-size: 16px;
+	color: ${color.tertiary};
+	margin-right: auto;
+`
+
+export const LoginInputContainerLoginButton = styled.div`
+	width: 100%;
+	height: 52px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: ${color.primary};
 	color: ${color.white};
-	border-radius: 10px;
+	border-radius: 6px;
+	font-family: ${textStyle.fontFamily.P6};
+`
+
+export const OtherLoginContainer = styled.div`
+	width: 82%;
+	padding-top: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+`
+
+export const OtherLoginTitle = styled.div`
+	font-size: 14px;
+	color: gray;
+	border-bottom: 1.5px solid #f2f3f7;
+	padding-bottom: 4px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`
+
+export const KakaoLoginButton = styled.div`
+	width: 100%;
+	height: 44px;
+	border-radius: 6px;
+	background-color: #f7e600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+`
+
+export const KakaoLoginLogo = styled(Image)`
+	width: 18px;
+	height: auto;
+`
+
+export const KakaoTitle = styled.span`
+	font-size: 14px;
+	color: #3a1d1d;
+	font-family: ${textStyle.fontFamily.P5};
+`
+
+export const NaverLoginButton = styled.div`
+	width: 100%;
+	height: 42px;
+	border-radius: 6px;
+	background-color: #03c75a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+`
+
+export const NaverLoginLogo = styled(Image)`
+	width: 30px;
+	height: auto;
+`
+
+export const NaverTitle = styled.span`
+	font-size: 14px;
+	color: ${color.white};
+	font-family: ${textStyle.fontFamily.P5};
 `
