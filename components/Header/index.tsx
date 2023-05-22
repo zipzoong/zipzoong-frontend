@@ -37,7 +37,7 @@ const Header = () => {
 				<S.Navigation color={color.gray} href="/login">
 					로그인
 				</S.Navigation>
-				<S.SignupButton>회원가입</S.SignupButton>
+				<S.SignupButton href="/signup">회원가입</S.SignupButton>
 			</S.HeaderContainer>
 			<S.MediaQuerySearchContainer>
 				<S.SearchInput placeholder="검색어를 입력하세요" />
