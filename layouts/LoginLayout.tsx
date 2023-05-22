@@ -2,8 +2,23 @@ import React from 'react'
 import * as S from './LoginLayout.style'
 import Kakao from 'assets/kakao.svg'
 import Naver from 'assets/naver.svg'
+import { auth } from '@zipzoong/sdk/lib/functional'
+import connection from '@/lib/connection'
 
 const LoginLayout = () => {
+	const [info, setInfo] = React.useState({
+		id: '',
+		password: '',
+	})
+
+	const onClickLogin = async () => {
+		auth.sign_in.execute(connection, {
+			user_type: 'customer',
+			code: 'string',
+			oauth_type: 'kakao',
+		})
+	}
+
 	return (
 		<S.LoginLayout>
 			<S.LoginBackgroundLayout>
@@ -12,13 +27,13 @@ const LoginLayout = () => {
 					<S.LoginInputContainer>
 						<S.LoginInputContainerBox>
 							<S.LoginInputContainerLabel>아이디</S.LoginInputContainerLabel>
-							<S.LoginInputContainerInput />
+							<S.LoginInputContainerInput onChange={(e) => setInfo({ ...info, id: e.target.value })} value={info.id} />
 						</S.LoginInputContainerBox>
 						<S.LoginInputContainerBox>
 							<S.LoginInputContainerLabel>비밀번호</S.LoginInputContainerLabel>
-							<S.LoginInputContainerInput type="password" />
+							<S.LoginInputContainerInput onChange={(e) => setInfo({ ...info, password: e.target.value })} value={info.password} type="password" />
 						</S.LoginInputContainerBox>
-						<S.LoginInputContainerLoginButton>로그인하기</S.LoginInputContainerLoginButton>
+						<S.LoginInputContainerLoginButton onClick={onClickLogin}>로그인하기</S.LoginInputContainerLoginButton>
 					</S.LoginInputContainer>
 					<S.OtherLoginContainer>
 						<S.OtherLoginTitle>다른 서비스로 로그인</S.OtherLoginTitle>
