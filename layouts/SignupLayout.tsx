@@ -1,7 +1,30 @@
 import React from 'react'
 import * as S from './SignupLayout.style'
+import { useRouter } from 'next/router'
+import { auth } from '@zipzoong/sdk/lib/functional'
+import connection from '@/lib/connection'
 
 const SignupLayout = () => {
+	// customer parser
+	const router = useRouter()
+	const onNavigateSignup = (title: string) => {
+		auth.user.create(connection, {
+			profile_image_url: '',
+			address: {
+				first: '',
+				second: '',
+			},
+			birth: 'YYYY-MM-DD',
+			gender: 'female',
+			name: 'string',
+			acceptant_agreement_ids: [''],
+			type: 'customer',
+			email_access_code: '',
+			phone_access_code: '',
+		})
+		// router.push(title)
+	}
+
 	return (
 		<S.SignupLayout>
 			<S.SignupBackgroundLayout>
@@ -11,7 +34,7 @@ const SignupLayout = () => {
 						<S.SignupTypeBox key={title}>
 							<S.SignupTypeImage src="" alt="" />
 							<S.SignupTypeText>text text text text text </S.SignupTypeText>
-							<S.SignupTypeButton>{title}</S.SignupTypeButton>
+							<S.SignupTypeButton onClick={() => onNavigateSignup(title)}>{title}</S.SignupTypeButton>
 						</S.SignupTypeBox>
 					))}
 				</S.SignupTypeBoxContainer>
