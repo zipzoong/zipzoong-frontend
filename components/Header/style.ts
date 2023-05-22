@@ -56,7 +56,7 @@ export const Navigation = styled(Link)<{ color: string; ismediaquery?: string }>
 	}
 `
 
-export const SignupButton = styled.button`
+export const SignupButton = styled(Link)`
 	width: 70px;
 	height: 30px;
 	background-color: ${color.primary};
@@ -64,6 +64,10 @@ export const SignupButton = styled.button`
 	font-size: ${textStyle.Body2_14_M.fontSize};
 	font-weight: ${textStyle.Body2_14_M.fontWeight};
 	font-family: ${textStyle.Body2_14_M.fontFamily};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 	border-radius: 10px;
 	border: none;
 `
