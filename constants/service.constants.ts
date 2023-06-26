@@ -1,6 +1,6 @@
 const service = {
-	HS_PROVIDER: 'HS_PROVIDER',
-	RE_AGENTS: 'RE_AGENTS',
-}
+  HS_PROVIDER: 'home_service_provider',
+  RE_AGENTS: 'real_estate_agent'
+};
 
-export default service
+export default service;
