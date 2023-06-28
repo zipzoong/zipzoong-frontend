@@ -134,6 +134,7 @@ export const MyPageInfomationFigure = styled.figure<{ tree?: boolean; last?: boo
       border-bottom: 1px solid ${color.tertiary_container};
     `}
   width: 96%;
+  color: black;
   height: 38px;
   padding-left: ${({ tree }) => (tree ? '18px' : '52px')};
   display: flex;
@@ -146,6 +147,7 @@ export const MyPageInfomationFigure = styled.figure<{ tree?: boolean; last?: boo
     width: 66px;
     height: 25px;
     cursor: pointer;
+    color: black;
     background-color: transparent;
     border: 1px solid ${color.on_tertiary};
     border-radius: 5px;

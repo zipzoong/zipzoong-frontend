@@ -9,7 +9,15 @@ interface MyPageLayoutPropsType {
   major: IHSProvider.IPrivate | IREAgent.IPrivate;
 }
 
+const EditLayout = () => {};
+
 const MyPageLayout = ({ data, major }: MyPageLayoutPropsType) => {
+  const [isEditMode, setIsEditMode] = React.useState(false);
+
+  const onChangeEditMode = () => {
+    setIsEditMode(!isEditMode);
+  };
+
   return (
     <S.MyPageLayout>
       <S.MyPageContainer>
@@ -24,7 +32,7 @@ const MyPageLayout = ({ data, major }: MyPageLayoutPropsType) => {
               <b>{data.name}</b>
             </S.MyPageProfileImageText>
             <S.MyPageProfileImageText>
-              {!major.type && '회원님'}
+              {data.type === 'customer' && '회원님'}
               {major.type === 'real estate agent' && '공인중개사님'}
               {major.type === 'home service provider' && '생활전문가님'}
             </S.MyPageProfileImageText>
@@ -44,20 +52,11 @@ const MyPageLayout = ({ data, major }: MyPageLayoutPropsType) => {
             <S.MyPageInfomationHeader>내정보</S.MyPageInfomationHeader>
             <S.MyPageInfomationFigure tree>
               내정보
-              <button>수정</button>
+              <button onClick={onChangeEditMode}>수정</button>
             </S.MyPageInfomationFigure>
-            <S.MyPageInfomationFigure>
-              본명 : {data.name}
-              <button>수정</button>
-            </S.MyPageInfomationFigure>
-            <S.MyPageInfomationFigure>
-              {data.phone}
-              <button>수정</button>
-            </S.MyPageInfomationFigure>
-            <S.MyPageInfomationFigure last>
-              {data.email}
-              <button>수정</button>
-            </S.MyPageInfomationFigure>
+            <S.MyPageInfomationFigure>본명 : {data.name}</S.MyPageInfomationFigure>
+            <S.MyPageInfomationFigure>{data.phone}</S.MyPageInfomationFigure>
+            <S.MyPageInfomationFigure last>{data.email}</S.MyPageInfomationFigure>
           </S.MyPageInfomationBox>
           {data.type !== 'customer' && (
             <S.MyPageInfomationBox>
