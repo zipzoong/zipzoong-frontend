@@ -11,59 +11,59 @@ interface MyPageSSRPropsType {
   data: ICustomer.IPrivate;
 }
 
-const MyPage = (data: ICustomer.IPrivate) => {
+const MyPage = ({ data }: MyPageSSRPropsType) => {
   const [more, setMore] = React.useState<users.hs_providers.me.get.Output | users.re_agents.me.get.Output>({
     example_images: [
       {
         is_visible: true,
-        id: 'string',
-        url: 'string',
-        created_at: '2023-06-26T06:46:56.459Z',
-        updated_at: '2023-06-26T06:46:56.459Z'
+        id: '',
+        url: '',
+        created_at: '',
+        updated_at: ''
       }
     ],
-    phone: 'string',
-    profile_image_url: 'string',
+    phone: '',
+    profile_image_url: '',
     introduction: {
-      title: 'string',
-      content: 'string'
+      title: '',
+      content: ''
     },
     expertise: {
-      super_category_id: 'string',
-      super_category_name: 'string',
+      super_category_id: '',
+      super_category_name: '',
       sub_expertises: [
         {
-          sub_category_id: 'string',
-          sub_category_name: 'string'
+          sub_category_id: '',
+          sub_category_name: ''
         }
       ]
     },
     address: {
-      first: 'string',
-      second: 'string'
+      first: '',
+      second: ''
     },
-    business_registration_num: 'string',
+    business_registration_num: '',
     type: 'home service provider',
     mode: 'private',
-    id: 'string',
-    name: 'string',
-    email: 'user@example.com',
-    created_at: '2023-06-26T06:46:56.459Z',
-    updated_at: '2023-06-26T06:46:56.459Z',
+    id: '',
+    name: '',
+    email: '',
+    created_at: '',
+    updated_at: '',
     is_verified: true,
     business_certification_images: [
       {
-        id: 'string',
-        url: 'string',
-        created_at: '2023-06-26T06:46:56.459Z',
-        updated_at: '2023-06-26T06:46:56.459Z'
+        id: '',
+        url: '',
+        created_at: '',
+        updated_at: ''
       }
     ],
     acceptant_agreements: [
       {
-        id: 'string',
-        title: 'string',
-        content: 'string',
+        id: '',
+        title: '',
+        content: '',
         target_type: 'customer',
         is_required: true
       }
@@ -88,7 +88,7 @@ const executeAPI = async () => {
   }
 };
 
-export const getServerSideProps: GetServerSideProps<MyPageSSRPropsType> = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const res = await executeAPI();
   if (!res) return { notFound: true };
 
